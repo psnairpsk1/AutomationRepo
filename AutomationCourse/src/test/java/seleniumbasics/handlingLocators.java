@@ -19,13 +19,21 @@ public class handlingLocators extends Base{
 		//x path using relative xpath
 		driver.findElement(By.xpath("//button[@id='button-one']"));
 		driver.findElement(By.xpath("//button[text()='Show Message']"));
+		driver.findElement(By.xpath("//button[starts-with(text(),'Show')]"));
 		driver.findElement(By.xpath("//button[@id='button-one' and @type='button' ]"));
 		driver.findElement(By.xpath("//button[@id='button-one' or @type='button12' ]"));
 		//access parent class..ie here our target is to access the parent object or element
+		
+ //		xpath acces method - uses when the above defined possibilities are not working for getting a 1 of 1 option we use the access methods 
 		driver.findElement(By.xpath("//div[contains (text(), 'Single Input Field')]//parent::div[@class='card']"));
 		//access child element with attribue value @id = 'button-one'..ie here our target is to access the child object or element
 		driver.findElement(By.xpath("//div[@class='card']//child::button[@id='button-one']"));
+		driver.findElement(By.xpath("//button[@id='button-one']//following::div[@class='card']"));
+		driver.findElement(By.xpath("//button[@id='button-one']//preceding:: div[@class='card']"));//This "reverse" lookup is a common strategy in tools like Selenium
 		
+		driver.findElement(By.xpath("//button[@id='button-one']//ancestor::div"));
+		
+		driver.findElement(By.xpath("//div[@class='card']//descendant::div"));
 	}
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
