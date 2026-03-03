@@ -11,9 +11,11 @@ public class HandlingDropdownCheckBoxRadioButton extends Base {
 		
 		driver.navigate().to("https://www.webdriveruniversity.com/Dropdown-Checkboxes-RadioButtons/index.html");
 		WebElement dropdown = driver.findElement(By.id("dropdowm-menu-1"));
+		
+		//In this code, Select is a specialized utility class provided by Selenium WebDriver to handle standard HTML dropdown menus created with the <select> tag.
 		Select select = new Select(dropdown);
 		//select the value using Select by index method
-		select.selectByIndex(2); //this will select Python
+		select.selectByIndex(2); //this will select Python from the above link.it will select the 2nd index position value
 
 		//select by value
 		select.selectByValue("c#");

@@ -30,9 +30,9 @@ public class handlingLocators extends Base{
 		driver.findElement(By.xpath("//div[@class='card']//child::button[@id='button-one']"));
 		driver.findElement(By.xpath("//button[@id='button-one']//following::div[@class='card']"));
 		driver.findElement(By.xpath("//button[@id='button-one']//preceding:: div[@class='card']"));//This "reverse" lookup is a common strategy in tools like Selenium
-		
+		//Selects all ancestors (parent, grandparent, etc.) of the current node
 		driver.findElement(By.xpath("//button[@id='button-one']//ancestor::div"));
-		
+		//Selects all descendants (children, grandchildren, etc.) of the current node
 		driver.findElement(By.xpath("//div[@class='card']//descendant::div"));
 	}
 	public static void main(String[] args) {
