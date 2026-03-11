@@ -13,6 +13,8 @@ public class WebElementCommands extends Base {
 		//entering text
 		msgbox.sendKeys("Test Message");
 		WebElement showbutton = driver.findElement(By.id("button-one"));
+		System.out.println(showbutton.isDisplayed());
+		System.out.println(showbutton.isEnabled());
 		showbutton.click();
 		//to get the message in the message box
 		WebElement yourmessage = driver.findElement(By.id("message-one"));
